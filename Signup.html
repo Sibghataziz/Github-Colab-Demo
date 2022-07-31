@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        div{
+            margin: auto;
+        }
+           #container div{
+            text-align: center;
+            width: 350px;
+            padding: 60px 40px;
+            background-color: #48c9b0;
+            margin-top: 100px;
+
+           }
+           p{
+            margin-top: -10px;
+            color: white;
+            font-size: 30px;
+           } 
+
+           #name, #email, #org{
+            width: 320px;
+            margin: 10px;
+            height: 50px;
+            border: 0;
+            padding-left: 10px;
+            font-size: 15px;
+           }
+           #btn1, #btn2{
+            background-color: #17a589;
+            color: white;
+            border: 0;
+            width: 332px;
+            margin: 10px;
+            height: 50px;
+            font-size: 15px;
+           }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div>
+            <p>- Visitor -</p>
+            <input id="name" type="text" placeholder="Full Name">
+            <br>
+            <input id="email" type="email" placeholder="Email">
+            <br>
+            <input id="org" type="text" placeholder="Organization">
+            <br>
+            <a href=""><button id="btn1">SIGN UP</button></a>
+            <br>
+            <a href=""><button id="btn2">RETURN</button></a>
+        </div>
+            
+    </div>
+</body>
+</html>
+<script>
+    
+    document.getElementById("btn1").addEventListener("click", GetData);
+    var dataArr = JSON.parse(localStorage.getItem("data") || []);
+
+    function GetData(){
+        var DataObj= {
+            name : document.getElementById("name").value,
+            email : document.getElementById("email").value,
+            Organization : document.getElementById("org").value
+        }
+        dataArr.push(DataObj);
+        localStorage.setItem( "data", JSON.stringify(dataArr));
+    }
+</script>
