@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+       body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+       }
+       #mainBox {
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        height: 450px;
+        width: 300px;
+        margin-top: 100px;
+        
+       }
+       
+       #mainBox #email input {
+        height: 100%;
+        width: 80%;
+        border: none;
+        font-size: 15px;
+        border-bottom: 2px solid silver;
+       }
+       #mainBox #password input {
+        height: 100%;
+        width: 80%;
+        border: none;
+        font-size: 15px;
+        border-bottom: 2px solid silver;
+       }
+       
+       
+       #email,#password {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        height: 30px;
+        width: 100%;
+        position: relative;
+        font-size: 20px;
+       }
+       h1 {
+        text-align: center;
+        font-weight: 900;
+        padding: 30px;
+       }
+       #loginBtn {
+        font-size: 15px;
+        border-radius: 5px;
+        border: none;
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+        width: 70% ;
+        padding: 10px;
+        margin: 20px;
+       }
+       div>p {
+        text-align: center;
+        color: rgb(122, 119, 114);
+       }
+       #password + div {
+        text-align: center;
+       }
+       #signUp {
+        border: none;
+        background-color: rgb(207, 226, 226);
+        border-radius: 5px;
+        padding: 5px 10px;
+       }
+       #signUp:hover {
+        color: white ;
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+        cursor: pointer;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="mainBox">
+        <h1>Login</h1>
+        <div id="email">
+            <input type="text" placeholder="Email"><br>
+            <!-- <label>Email</label> -->
+        </div>
+        <div id="password">
+            <input type="text" placeholder="Password"><br>
+            <!-- <label >Password</label> -->
+        </div>
+        <div>
+        <button id="loginBtn">Login</button>
+        <p>Forgot password?</p>
+        <p>Don't have an account? <span > <button id="signUp">Sign Up</button></span> </p> 
+        </div>
+        
+    </div>
+</body>
+</html>
